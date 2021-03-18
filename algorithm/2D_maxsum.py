@@ -18,15 +18,29 @@ maxIndex[0] ~ maxIndex[n]
 
 '''
 
-def max_subarr(arr):
+
+def max_sum_subarr(arr):
     current_sum = 0
     max_sum = float('-inf')
+
     for i in range(len(arr)):
         current_sum = max(arr[i], current_sum + arr[i])
         max_sum = max(current_sum, max_sum)
 
-
     return max_sum
+
+
+print(max_sum_subarr([1, 2, 3]))
+
+# def max_subarr(arr):
+#     current_sum = 0
+#     max_sum = float('-inf')
+#     for i in range(len(arr)):
+#         current_sum = max(arr[i], current_sum + arr[i])
+#         max_sum = max(current_sum, max_sum)
+#
+#
+#     return max_sum
 
 
 # 2d matrix sum
