@@ -1,0 +1,26 @@
+'''
+count smaller element on right side
+ex) [6, 3, 7, 2]
+     2  1  1  0
+     6의 오른쪽 엘리먼트 중에 작은 엘리먼트 3, 2  2개
+     3의 오른쪽 엘리먼트 중에 작은 엘리먼트 2   1개
+     7의 오른쪽 엘리먼트 중에 작은 엘리먼트 2   1개
+     2의 오른쪽 엘리먼트 중에 작은 엘리먼트 엘리먼트 자체가 없음 0개
+     2 1 1 0
+
+merge sort 를 사용하라는 아이디어 힌트
+'''
+
+def mergesort(item, low, high):
+    if low > high:
+        return
+
+    mid = (low + high) // 2
+    mergesort(item, low, mid)
+    mergesort(item, mid + 1, high)
+    mergesort(item, low, mid, high)
+
+
+arr = [ 19, 15, 23, 33, 12, 22, 10, 6, 3, 3]
+
+print(mergesort(arr, 0, len(arr) - 1))

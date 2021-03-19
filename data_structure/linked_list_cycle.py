@@ -27,3 +27,6 @@ def hasCycle(self, head):
             return True
 
     return False
+
+
+print(hasCycle([1, 2]))
