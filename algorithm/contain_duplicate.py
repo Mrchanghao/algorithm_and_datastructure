@@ -26,13 +26,13 @@ def another_solution(nums):
 
 
 
-def third_solution(nums):
+def third_solution(arr):
     m = defaultdict(int)
     for num in arr:
         if m[num]:
             return True
         m[num] += 1
-        return False
+    return False
 
 print(third_solution([1, 2, 3, 3, 5]))
 
