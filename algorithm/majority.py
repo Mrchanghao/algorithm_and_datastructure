@@ -21,12 +21,19 @@ arr = list(map(int, input().split()))
 '''
 
 def majorityElement(arr):
+    # m = {}
+    # for v in arr:
+    #     m[v] = m.get(v, 0) + 1
+    #
+    # for v in arr:
+    #     if m[v] >= (len(arr) // 2):
+    #         return v
     m = {}
     for v in arr:
         m[v] = m.get(v, 0) + 1
 
     for v in arr:
-        if m[v] >= (len(arr) // 2):
+        if m[v] >= len(arr) // 2:
             return v
 
 
