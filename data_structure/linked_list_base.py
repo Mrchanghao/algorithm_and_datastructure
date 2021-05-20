@@ -27,7 +27,7 @@ class LinkedList(object):
 
 list = LinkedList()
 
-list.head = None(5)
+list.head = Node(5)
 
 second = Node(1)
 third = Node(4)
@@ -38,5 +38,5 @@ list.head.next = second
 second.next = third
 third.next = forth
 
-forth.printList()
+list.printList()
 
