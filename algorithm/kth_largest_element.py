@@ -64,4 +64,4 @@ def find_kth_largest_two(nums, size, k):
     for i in min_heap:
         print(i, end = ' ')
 
-print(find_kth_largest([3, 2, 1, 4, 5, 6], 2))  # return 5
+(find_kth_largest_two([3, 2, 1, 4, 5, 6], 5, 2))  # return 5
