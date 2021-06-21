@@ -46,14 +46,43 @@ class LinkkedList(object):
 
 
     def reverse(self):
+        node, prev = self.head, None
+
+        while node:
+            next, node.next = node.next, prev
+            prev, node = node, next
+
+        return prev
+
+    def changeToList(self, node):
+        list = []
+        while node:
+            list.append(node.value)
+            node = node.next
+        return list
+
+    def changeToLinkedList(self, list):
         prev = None
-        current = self.head
-        while current is not None:
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
-        self.head = prev
+        for r in list:
+            node = LinkkedList(r)
+            node.next = prev
+            prev = node
+        return node
+
+
+    def reverse_recur(self):
+        def reverse_method(node, prev=None):
+            if not node:
+                return prev
+            next = node.next
+            node.next = prev
+            return reverse_method(next, node)
+
+        return reverse_method(self.head)
+
+
+
+
 
     def print_list(self):
         temp = self.head
