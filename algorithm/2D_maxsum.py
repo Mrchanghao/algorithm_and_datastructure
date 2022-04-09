@@ -1,22 +1,22 @@
-'''
-M X N
+# '''
+# M X N
 
-row col
+# row col
 
-6 - 5, 7 4
-1, 3, -6 10
-8 -9 -3  7
+# 6 - 5, 7 4
+# 1, 3, -6 10
+# 8 -9 -3  7
 
-가장 큰 사각형 의 합
+# 가장 큰 사각형 의 합
 
-'''
-'''
-max subarr sum
-A 
-A[0] A[1] A[2] ~ A[n]
-maxIndex[0] ~ maxIndex[n]
+# '''
+# '''
+# max subarr sum
+# A 
+# A[0] A[1] A[2] ~ A[n]
+# maxIndex[0] ~ maxIndex[n]
 
-'''
+# '''
 
 
 def max_sum_subarr(arr):
